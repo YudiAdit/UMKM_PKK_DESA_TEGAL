@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="shortcut icon" href="Aseet/BG UMKM.png" type="">
+
+  <title> Mawar Biru </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="Aseet/Bg2.png" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="admin/Login.php">
+            <span>
+              PKK Desa Tegal
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.php">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="book.html">Contact <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <!-- <div class="user_option">
+              </a>
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- book section -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Hubungi Kontak
+        </h2>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <p>
+            Para pelanggan yang ingin membeli produk-produk yang tersedia di UMKM PKK Desa Tegal dapat menghubungi 
+            nomor yang tertera di bawah ini. Jika ingin mengunjungi lokasi produksi, bisa menggunakan peta yang
+            terletak di samping
+          </p>
+        </div>
+        <!-- <div class ="Whatsapp">
+          <div class="WA1">
+            <a href="https://wa.me/+6281285525433" target="_blank">Ibu Lily</a>
+            <a href="https://wa.me/+6281280071434" target="_blank">Ibu Dewi</a>
+            <a href="https://wa.me/+6281280071396" target="_blank">Ibu Yuni</a>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div> -->
+      </div>
+      
+          <title>Form Pemesanan Produk UMKM</title>
+          <script>
+              function openPopup() {
+                  document.getElementById('popup').style.display = 'flex';
+              }
+      
+              function closePopup() {
+                  document.getElementById('popup').style.display = 'none';
+              }
+      
+              function submitForm(event) {
+                  // Prevent the form from submitting normally
+                  event.preventDefault();
+      
+                  // Collect form data
+                  var nama = document.getElementById('nama').value;
+                  var telepon = document.getElementById('telepon').value;
+                  var alamat = document.getElementById('alamat').value;
+                  var pesanan = document.getElementById('pesanan').value;
+      
+                  // Construct your WhatsApp message here
+                  var message = 'Halo, saya ingin memesan produk UMKM dengan detail berikut:\n' +
+                                'Nama: ' + nama + '\n' +
+                                'No Telephone: ' + telepon + '\n' +
+                                'Alamat: ' + alamat + '\n' +
+                                'Pesanan: ' + pesanan;
+      
+                  // Encode message for URL
+                  var encodedMessage = encodeURIComponent(message);
+      
+                  // Replace this with your actual WhatsApp number
+                  var whatsappURL = 'https://wa.me/6285810737106?text=' + encodedMessage;
+      
+                  // Open WhatsApp in a new tab
+                  window.open(whatsappURL, '_blank');
+      
+                  // Close the popup
+                  closePopup();
+              }
+          </script>
+      </head>
+      <body>
+          <button onclick="openPopup()" class="order-button">
+              Form Pemesanan Produk UMKM
+          </button>
+          
+          <div id="popup" class="popup">
+              <div class="popup-content">
+                  <h3>Form Pemesanan Produk UMKM</h3>
+                  <form onsubmit="submitForm(event)">
+                      <label for="nama">Nama:</label>
+                      <input type="text" id="nama" name="nama" required />
+          
+                      <label for="telepon">No Telephone:</label>
+                      <input type="tel" id="telepon" name="telepon" required />
+          
+                      <label for="alamat">Alamat:</label>
+                      <input type="text" id="alamat" name="alamat" required />
+              
+                      <label for="pesanan">Pesanan:</label>
+                      <textarea id="pesanan" name="pesanan" required></textarea>
+          
+                      <button type="submit" class="submit-button">Pesan</button>
+                  </form>
+                  <br />
+                  <button onclick="closePopup()" class="close-button">
+                      Tutup
+                  </button>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+      <!-- <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Phone Number" />
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Your Email" />
+              </div>
+              <div>
+                <select class="form-control nice-select wide">
+                  <option value="" disabled selected>
+                    How many persons?
+                  </option>
+                  <option value="">
+                    2
+                  </option>
+                  <option value="">
+                    3
+                  </option>
+                  <option value="">
+                    4
+                  </option>
+                  <option value="">
+                    5
+                  </option>
+                </select>
+              </div>
+              <div>
+                <input type="date" class="form-control">
+              </div>
+              <div class="btn_box">
+                <button>
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div id="googleMap"></div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!-- end book section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href="book.html">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="book.html">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call
+                </span>
+              </a>
+              <a href="book.html">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Mawar Biru
+            </a>
+            <p>
+              UMKM Desa Tegal Temukan Produk Local
+            </p>
+            <!-- <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Jam Oprasional
+          </h4>
+          <p>
+            Everyday
+          </p>
+          <p>
+            10.00 Wib -15.00 Wib
+          </p>
+        </div>
+      </div>
+      <!-- <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By
+          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+        </p>
+      </div> -->
+    </div>
+  </footer>
+  <!-- footer section -->
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0964946325573!2d106.7023561695494!3d
+  -6.472695999594941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69dda26dd80c09%3A0xc7e40a62b0f5e919!
+  2sWarung%20mama%20attar!5e0!3m2!1sid!2sid!4v1720514875046!5m2!1sid!2sid" width="600" height="450" 
+  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
