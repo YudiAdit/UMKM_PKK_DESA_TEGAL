@@ -106,6 +106,8 @@ if (isset($_GET['edit_id'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Aseet/BG UMKM.png" type="">
+    
     <title>Add/Edit Product</title>
     <link rel="stylesheet" href="../css/logout.css">
     <link rel="stylesheet" href="../css/admin.css">

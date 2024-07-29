@@ -110,12 +110,52 @@ a:focus {
   height: 100%;
 }
 
+/* .iframe {
+  position: absolute;
+  top: 190px;
+  left: 800px;
+  width: 40%;
+  height: 50%;
+} */
+
 .iframe {
   position: absolute;
   top: 190px;
   left: 800px;
   width: 40%;
   height: 50%;
+}
+
+/* Gaya khusus untuk perangkat dengan lebar maksimum 768px (tablet dan mobile) */
+@media only screen and (max-width: 768px) {
+  .iframe {
+    position: relative;
+    top: 20%; /* Mengatur ulang posisi atas untuk perangkat yang lebih kecil */
+    left: 5%; /* Mengatur ulang posisi kiri untuk perangkat yang lebih kecil */
+    width: 90%; /* Memperluas lebar agar lebih pas di layar kecil */
+    height: 70vh; /* Menentukan tinggi peta agar sesuai dengan layar tablet */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .iframe {
+    position: relative;
+    top: 20%; /* Mengatur ulang posisi atas untuk perangkat yang lebih kecil */
+    left: 5%; /* Mengatur ulang posisi kiri untuk perangkat yang lebih kecil */
+    width: 90%; /* Memperluas lebar agar lebih pas di layar kecil */
+    height: 70vh; /* Menentukan tinggi peta agar sesuai dengan layar tablet */
+  }
+}
+
+/* Gaya khusus untuk perangkat dengan lebar maksimum 480px (mobile) */
+@media only screen and (max-width: 480px) {
+  .iframe {
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 60vh; 
+  }
 }
 
 .bg-box img {

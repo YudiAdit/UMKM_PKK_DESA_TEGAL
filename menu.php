@@ -48,7 +48,7 @@ $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="admin/login.php">
+          <a class="navbar-brand" href="index.html">
             <span>
               PKK Desa Tegal
             </span>
@@ -173,7 +173,7 @@ $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
             <a href="" class="footer-logo">
-              Mawar Biru
+            PKK Desa Tegal
             </a>
             <p>
               UMKM Desa Tegal Temukan Produk Local
