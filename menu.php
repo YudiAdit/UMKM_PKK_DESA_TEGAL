@@ -127,9 +127,9 @@ $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
             echo "<div class='product'>";
             echo "<img src='uploads/" . $row['image'] . "' alt='" . $row['name'] . "'>";
             echo "<h2>" . $row['name'] . "</h2>";
-            echo "<p>Harga: Rp" . $row['price'] . "</p>";
-            echo "<p>Category: " . $row['category_name'] . "</p>";
-            echo "<p>Description: " . $row['description'] . "</p>";  // Menampilkan deskripsi produk
+            echo "<p>harga: Rp" . number_format( $row['price'], 0, ',', '.' ) . "</p>";
+            echo "<p>kategori: " . $row['category_name'] . "</p>";
+            echo "<p>deskripsi: " . $row['description'] . "</p>";  // Menampilkan deskripsi produk
             echo "</div>";
           }
           ?>
