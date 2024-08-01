@@ -7,6 +7,11 @@ if (!isset($_SESSION['admin'])) {
 
 include '../includes/db.php';
 
+// Menampilkan error
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['image'])) {
     $id = $_POST['id'] ?? null;
     $name = $_POST['name'];
@@ -29,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['image'])) {
     }
 
     // Check file size
-    if ($_FILES['image']['size'] > 500000) {
+    if ($_FILES['image']['size'] > 5000000) {
         echo "Sorry, your file is too large.";
         $upload_ok = 0;
     }
@@ -53,6 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['image'])) {
                 $stmt->bind_param("sdsssi", $name, $price, $category_id, $description, $image, $id);
                 if ($stmt->execute()) {
                     $success = "Product updated successfully!";
+                    header("Location: index.php");
+                    exit();
                 } else {
                     $error = "Error updating product!";
                 }
@@ -63,6 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['image'])) {
                 $stmt->bind_param("sdsss", $name, $price, $category_id, $description, $image);
                 if ($stmt->execute()) {
                     $success = "Product added successfully!";
+                    header("Location: index.php");
+                    exit();
                 } else {
                     $error = "Error adding product!";
                 }
@@ -109,26 +118,26 @@ if (isset($_GET['edit_id'])) {
     <link rel="shortcut icon" href="Aseet/BG UMKM.png" type="">
     
     <title>Add/Edit Product</title>
-    <link rel="stylesheet" href="../css/logout.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/logout.css">
 </head>
 <body>
     <div class="admin-container">
         <div class="header">
-        <h2>Admin Panel</h2>
+        <h2>Halaman Tambah Produk</h2>
         <a href="logout.php" class="logout-btn">Logout</a> <!-- Tambahkan kelas logout-btn di sini -->
         </div>
-        <h3><?php echo $edit_product ? "Edit Product" : "Add Product"; ?></h3>
+        <h3><?php echo $edit_product ? "Ubah Produk" : "Tambah Produk"; ?></h3>
         <main>
             <form method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $edit_product['id'] ?? ''; ?>">
-                <label for="name">Product Name:</label>
+                <label for="name">Nama Produk:</label>
                 <input type="text" id="name" name="name" value="<?php echo $edit_product['name'] ?? ''; ?>" required>
                 <br>
-                <label for="price">Price:</label>
+                <label for="price">Harga:</label>
                 <input type="number" id="price" name="price" step="0.01" value="<?php echo $edit_product['price'] ?? ''; ?>" required>
                 <br>
-                <label for="category_id">Category:</label>
+                <label for="category_id">Kategori :</label>
                 <select id="category_id" name="category_id" required>
                     <?php
                     $sql = "SELECT * FROM categories";
@@ -140,13 +149,14 @@ if (isset($_GET['edit_id'])) {
                     ?>
                 </select>
                 <br>
-                <label for="description">Description:</label>
+                <label for="description">Depskripsi :</label>
                 <textarea id="description" name="description" required><?php echo $edit_product['description'] ?? ''; ?></textarea>
                 <br>
-                <label for="image">Image:</label>
+                <label for="image">Foto Produk:</label>
                 <input type="file" id="image" name="image" <?php echo $edit_product ? '' : 'required'; ?>>
+                <p class="file-size-info">Maksimal ukuran file adalah 5 MB.</p>
                 <br>
-                <button type="submit"><?php echo $edit_product ? "Update Product" : "Add Product"; ?></button>
+                <button type="submit"><?php echo $edit_product ? "Perbarui Produk" : "Tambahkan Produk"; ?></button>
             </form>
             <?php
             if (isset($success)) echo "<p>$success</p>";
@@ -154,7 +164,7 @@ if (isset($_GET['edit_id'])) {
             ?>
         </main>
 
-        <h3>Existing Products</h3>
+        <h3>Produk Tersedia</h3>
         <div class="product-list">
             <?php
             $sql = "SELECT * FROM products";
@@ -165,11 +175,11 @@ if (isset($_GET['edit_id'])) {
                     echo "<div class='product'>";
                     echo "<img src='../uploads/" . $row['image'] . "' alt='" . $row['name'] . "'>";
                     echo "<h4>" . $row['name'] . "</h4>";
-                    echo "<p>Price: Rp" . $row['price'] . "</p>";
-                    echo "<p>Category: " . $row['category_id'] . "</p>";
-                    echo "<p>Description: " . $row['description'] . "</p>";
-                    echo "<a href='?edit_id=" . $row['id'] . "'>Edit</a>";
-                    echo "<a href='?delete_id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this product?\");'>Delete</a>";
+                    echo "<p>harga: Rp" . number_format( $row['price'], 0, ',', '.' ) . "</p>";
+                    echo "<p>kategori: " . $row['category_id'] . "</p>";
+                    echo "<p>Deskripsi: " . $row['description'] . "</p>";
+                    echo "<a href='?edit_id=" . $row['id'] . "'>Ubah Produk</a>";
+                    echo "<a href='?delete_id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this product?\");'>Hapus Produk</a>";
                     echo "</div>";
                 }
             } else {
