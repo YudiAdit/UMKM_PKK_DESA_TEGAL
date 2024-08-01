@@ -76,8 +76,9 @@ button:hover {
 }
 
 .product img {
-    max-width: 100%;
-    height: auto;
+    width: 150px; /* Atur lebar gambar sesuai kebutuhan Anda */
+    height: 150px; /* Atur tinggi gambar sesuai kebutuhan Anda */
+    object-fit: cover; /* Ini akan memastikan gambar menyesuaikan dalam kotak tanpa mengubah rasio aspek */
 }
 
 .product h4 {
