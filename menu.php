@@ -42,7 +42,7 @@ $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="Aseet/Bg2.png" alt="">
+      <img src="Aseet/Desktop - 1.png" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -146,25 +146,25 @@ $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
             <h4>
-              Contact Us
+              Media
             </h4>
             <div class="contact_link_box">
               <a href="book.html">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Lokasi
                 </span>
               </a>
               <a href="book.html">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call
+                  Hubungi
                 </span>
               </a>
               <a href="book.html">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  @Pemerintah_Desa_tegal
                 </span>
               </a>
             </div>
