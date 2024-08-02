@@ -386,7 +386,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #ffffff;
+  color: black;
   margin-bottom: 145px;
 }
 
@@ -664,8 +664,8 @@ a:focus {
 }
 
 .about_section {
-  background: #222831;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .about_section .row {
@@ -836,7 +836,7 @@ a:focus {
 }
 
 .client_section .box .detail-box {
-  background-color: #222831;
+  background-color: white;
   color: #ffffff;
   padding: 25px 25px 15px 25px;
   border-radius: 5px;
@@ -949,7 +949,7 @@ a:focus {
 
 /* footer section*/
 .footer_section {
-  background-color: #222831;
+  background: linear-gradient(135deg, #0a2a41, #0d3d5c, #126a85);
   color: #ffffff;
   padding: 75px 0 40px 0;
   text-align: center;
@@ -967,7 +967,7 @@ a:focus {
 }
 
 .footer_section p {
-  color: #dbdbdb;
+  color: #ffffff;
 }
 
 .footer_section .footer-col {
